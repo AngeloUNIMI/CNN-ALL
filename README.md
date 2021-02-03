@@ -9,7 +9,7 @@ Matlab source code for the paper:
 	
 Project page:
 
-	https://iebil.di.unimi.it/cnnALL/index.htm
+https://iebil.di.unimi.it/cnnALL/index.htm
     
 Outline:
 ![Outline](https://iebil.di.unimi.it/cnnALL/imgs/outline.jpg "Outline")
