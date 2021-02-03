@@ -2,7 +2,7 @@
 %------------------------------
 %General parameters
 %%%%%% QUI %%%%%%
-param.numIterations = 2; %number of re-iterations.
+param.numIterations = 10; %number of re-iterations.
 % param.kfold = 10; %k-1 partition used for training; 1 partitions for testing
 param.kfold = 2; %k-1 partition used for training; 1 partitions for testing
 %knn parameters
