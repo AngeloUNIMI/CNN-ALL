@@ -1,4 +1,4 @@
-# VAR-PCANet
+# CNN-ALL
 
 Matlab source code for the paper:
 
