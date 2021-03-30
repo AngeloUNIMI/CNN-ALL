@@ -44,4 +44,39 @@ Part of the code uses the Matlab source code of the paper:
 	DOI: 10.1109/TIP.2015.2475625
 	http://mx.nthu.edu.tw/~tsunghan/Source%20codes.html
 
+The 1Shot-MaxPol library:
+
+	Mahdi S. Hosseini and Konstantinos N. Plataniotis 
+	"Convolutional Deblurring for Natural Imaging," 
+	IEEE Transactions on Image Processing, 2019.
+	https://github.com/mahdihosseini/1Shot-MaxPol
 	
+The FQPath library:
+
+	Hosseini, Mahdi S., Jasper AZ Brawley-Hayes, Yueyang Zhang, Lyndon Chan, Konstantinos N. Plataniotis, and Savvas Damaskinos
+	"Focus Quality Assessment of High-Throughput Whole Slide Imaging in Digital Pathology." 
+	IEEE Transactions on Medical Imaging (2019)
+	https://github.com/mahdihosseini/FQPath
+	
+The Fast N-D Grayscale Image Segmentation library:
+
+	Fast N-D Grayscale Image Segmenation With c- or Fuzzy c-Means
+	https://github.com/AntonSemechko/Fast-Fuzzy-C-Means-Segmentation
+	
+The Stain Deconvolution library:
+
+	SCD_FastICA
+	https://github.com/lisatostrams/SCD_FastICA
+	
+and the Colour Image Normalization library:
+
+	Finlayson, G., Schiele, B., & Crowley, J. (1998). 
+	Comprehensive Colour Image Normalization. 
+	Computer Vision—ECCV’98, 1406, 475–490. 
+	https://doi.org/10.1007/BFb0055655
+	https://it.mathworks.com/matlabcentral/fileexchange/60360-comprehensive-colour-normalization
+	
+
+
+
+
