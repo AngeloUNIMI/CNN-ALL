@@ -12,7 +12,7 @@ Project page:
 https://iebil.di.unimi.it/cnnALL/index.htm
     
 Outline:
-![Outline](https://iebil.di.unimi.it/cnnALL/imgs/outline.jpg "Outline")
+![Outline](https://iebil.di.unimi.it/cnnALL/imgs/outline_icassp21.jpg "Outline")
 
 Citation:
 
