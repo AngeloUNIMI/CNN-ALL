@@ -19,14 +19,15 @@ Outline:
 Citation:
 
 	@InProceedings {icassp21,
-        author = {A. Genovese and M. S. Hosseini and V. Piuri and K. N. Plataniotis and F. Scotti},
-        title = {Acute Lymphoblastic Leukemia detection based on adaptive unsharpening and Deep Learning},
-        journal = {Proc. of the 2021 IEEE Int. Conf. on Acoustics, Speech, and Signal Processing (ICASSP 2021)},
-        address = {Toronto, ON, Canada},
-        pages = {1-5},
-        month = {June},
-        day = {6-11},
-        year = {2021},
+    author = {A. Genovese and M. S. Hosseini and V. Piuri and K. N. Plataniotis and F. Scotti},
+    booktitle = {Proc. of the 2021 IEEE Int. Conf. on Acoustics, Speech, and Signal Processing (ICASSP 2021)},
+    title = {Acute Lymphoblastic Leukemia detection based on adaptive unsharpening and Deep Learning},
+    address = {Toronto, ON, Canada},
+    pages = {1205-1209},
+    month = {June},
+    day = {6-11},
+    year = {2021},
+    note = {978-1-7281-7605-5}
     }
 
 Main files:
