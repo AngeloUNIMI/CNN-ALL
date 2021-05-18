@@ -2,10 +2,11 @@
 
 Matlab source code for the paper:
 
-	A. Genovese, M. S. Hosseini, V. Piuri, K. N. Plataniotis, and F. Scotti
-    "Acute Lymphoblastic Leukemia detection based on adaptive unsharpening and Deep Learning", 
-    Proc. of the 2021 IEEE Int. Conf. on Acoustics, Speech, and Signal Processing (ICASSP 2021), 
-    Toronto, ON, Canada, June 6-11, 2021
+	A. Genovese, M. S. Hosseini, V. Piuri, K. N. Plataniotis, and F. Scotti, 
+	"Acute Lymphoblastic Leukemia detection based on adaptive unsharpening and Deep Learning", 
+	in Proc. of the 2021 IEEE Int. Conf. on Acoustics, Speech, and Signal Processing (ICASSP 2021), 
+	Toronto, ON, Canada, June 6-11, 2021, pp. 1205-1209. 
+	ISBN: 978-1-7281-7605-5. [DOI: 10.1109/ICASSP39728.2021.9414362]
 	
 Project page:
 
