@@ -41,10 +41,11 @@ The adaptive preprocessing increases local detail while preserving the underlyin
 <div align="center">
 
 <img src="imgs/raabin_original_vs_unsharp.png" alt="RAABIN-WBC original vs adaptive unsharpening" width="95%">
+<img src="imgs/allidb2_original_vs_unsharp.png" alt="ALL-IDB2 original vs adaptive unsharpening" width="95%">
 
 </div>
 
-Example comparison on RAABIN-WBC. Each original image is paired with the corresponding adaptively unsharpened version.
+Example comparison on RAABIN-WBC and ALL-IDB2. Each original image is paired with the corresponding adaptively unsharpened version.
 
 ---
 
