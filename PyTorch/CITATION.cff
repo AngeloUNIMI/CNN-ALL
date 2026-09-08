@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the original CNN-ALL paper when using this software."
+title: "CNN-ALL-PyTorch"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Genovese
+    given-names: Angelo
+license: GPL-3.0-or-later
+preferred-citation:
+  type: conference-paper
+  title: "Acute Lymphoblastic Leukemia detection based on adaptive unsharpening and Deep Learning"
+  authors:
+    - family-names: Genovese
+      given-names: Angelo
+    - family-names: Hosseini
+      given-names: Mahdi S.
+    - family-names: Piuri
+      given-names: Vincenzo
+    - family-names: Plataniotis
+      given-names: Konstantinos N.
+    - family-names: Scotti
+      given-names: Fabio
+  year: 2021
+  conference: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  doi: 10.1109/ICASSP39728.2021.9414362

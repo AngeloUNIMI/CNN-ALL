@@ -1,0 +1,13 @@
+# Install a CUDA-enabled PyTorch build first, following the official selector:
+# https://pytorch.org/get-started/locally/
+numpy>=1.26
+scipy>=1.11
+pillow>=10.0
+PyYAML>=6.0
+pandas>=2.0
+scikit-learn>=1.4
+scikit-image>=0.22
+matplotlib>=3.8
+tqdm>=4.66
+torch>=2.5
+torchvision>=0.20

@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+cache/
+Results_PyTorch/
+imgs/unsharp/
+smoke_data/
+smoke_output/
+*.log
+*.pid
+.DS_Store

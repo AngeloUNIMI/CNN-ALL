@@ -1,0 +1,112 @@
+runtime:
+  device: auto
+  seed: 1337
+  deterministic: false
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  cudnn_benchmark: true
+  allow_tf32: true
+  log_level: INFO
+  resume: true
+
+dataset:
+  type: all_idb2
+  root: ./imgs/orig
+  all_idb_image_subdir: ALL-IDB/ALL_IDB2/img
+  prepared_root: ./cache/prepared/ALL_IDB2
+  manifest: ./cache/prepared/ALL_IDB2/manifest.csv
+  classes: [Healthy, ALL]
+  extensions: [.jpg, .jpeg, .png, .tif, .tiff, .bmp]
+  roi_size: [256, 256]
+  use_existing_crops: false
+  legacy_segmentation: true
+  segmentation_axis_scale: 1.5
+  apply_color_normalization: true
+  overwrite_prepared: false
+
+focus:
+  enabled: true
+  cache_dir: ./cache/focus_all_idb2
+  batch_size: 32
+  initial_image_size: [128, 128]
+  application_image_size: [256, 256]
+  radii: [1, 3, 5, 7, 9, 11, 13, 15, 17]
+  amount: 0.8
+  edge_threshold: 0.0
+  initial_threshold_start: 9.0
+  initial_threshold_steps: 30
+  initial_threshold_step: 0.1
+  tune_half_range: 0.5
+  tune_step: 0.1
+  matlab_rgb_lab_sharpen: true
+  force_recompute_cache: false
+
+pcanet:
+  enabled: true
+  image_size: [128, 128]
+  num_stages: 1
+  patch_sizes: [15]
+  max_filters: [11]
+  dynamic_filters: true
+  retained_variance: [0.92]
+  hist_block_size: [23, 23]
+  block_overlap_ratio: 0.0
+  fit_batch_size: 4
+  feature_batch_size: 16
+  covariance_patch_chunk: 8192
+  dtype: float32
+  max_training_images: 100000
+  save_best_filters: false
+
+knn:
+  neighbors: 1
+  distance: euclidean
+  query_chunk_size: 128
+  gallery_chunk_size: 2048
+
+experiment:
+  output_dir: ./Results_PyTorch/ALL_IDB2
+  num_iterations: 10
+  kfold: 2
+  run_shared_phase: true
+  run_pretrained_features: true
+  run_finetuning: true
+  run_gradcam: true
+  backbones: [alexnet, vgg16, vgg19, resnet18, resnet50, resnet101, densenet201]
+  selected_iterations: null
+  selected_backbones: null
+
+cnn:
+  pretrained: true
+  download_weights: true
+  input_size: 224
+  batch_size: 20
+  feature_batch_size: 64
+  epochs: 100
+  learning_rate: 0.0001
+  head_lr_multiplier: 20.0
+  momentum: 0.9
+  weight_decay: 0.0001
+  label_smoothing: 0.0
+  amp: true
+  compile: false
+  channels_last: true
+  class_weighted_loss: false
+  balanced_sampler: false
+  horizontal_flip: true
+  vertical_flip: true
+  rotation_degrees: 180.0
+  log_every_steps: 20
+  checkpoint_every_epochs: 1
+  preprocess_mode: imagenet
+  gradcam_max_samples: 10
+  gradcam_only_sharpened: true
+
+export:
+  enabled: true
+  output_dir: ./imgs/unsharp/ALL_IDB2
+  batch_size: 32
+  overwrite: true
+  save_metadata_csv: true

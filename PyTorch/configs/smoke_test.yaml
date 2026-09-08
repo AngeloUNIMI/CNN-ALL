@@ -1,0 +1,86 @@
+runtime:
+  device: cpu
+  seed: 7
+  deterministic: true
+  num_workers: 0
+  pin_memory: false
+  persistent_workers: false
+  prefetch_factor: 2
+  cudnn_benchmark: false
+  allow_tf32: false
+  log_level: INFO
+  resume: false
+
+dataset:
+  type: raabin_wbc
+  root: ./smoke_data
+  prepared_root: ./smoke_output/prepared
+  manifest: ./smoke_output/prepared/manifest.csv
+  classes: [Basophil, Eosinophil, Lymphocyte, Monocyte, Neutrophil]
+  roi_size: [64, 64]
+  use_existing_crops: true
+  apply_color_normalization: false
+  overwrite_prepared: true
+
+focus:
+  enabled: true
+  cache_dir: ./smoke_output/focus
+  batch_size: 4
+  initial_image_size: [32, 32]
+  application_image_size: [64, 64]
+  radii: [1, 3]
+  amount: 0.8
+  initial_threshold_start: 9.0
+  initial_threshold_steps: 2
+  initial_threshold_step: 0.1
+  tune_half_range: 0.0
+  tune_step: 0.1
+  force_recompute_cache: true
+
+pcanet:
+  enabled: true
+  image_size: [32, 32]
+  num_stages: 1
+  patch_sizes: [3]
+  max_filters: [3]
+  dynamic_filters: false
+  retained_variance: [0.92]
+  hist_block_size: [8, 8]
+  block_overlap_ratio: 0.0
+  fit_batch_size: 2
+  feature_batch_size: 4
+  covariance_patch_chunk: 4096
+  dtype: float32
+
+knn:
+  neighbors: 1
+  distance: euclidean
+  query_chunk_size: 16
+  gallery_chunk_size: 64
+
+experiment:
+  output_dir: ./smoke_output/results
+  num_iterations: 1
+  kfold: 2
+  run_shared_phase: true
+  run_pretrained_features: false
+  run_finetuning: false
+  run_gradcam: false
+  backbones: [resnet18]
+
+cnn:
+  pretrained: false
+  input_size: 64
+  batch_size: 2
+  feature_batch_size: 2
+  epochs: 1
+  amp: false
+  compile: false
+  channels_last: false
+  gradcam_max_samples: 2
+
+export:
+  enabled: true
+  output_dir: ./smoke_output/unsharp
+  batch_size: 4
+  overwrite: true

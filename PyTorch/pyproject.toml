@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnn-all-pytorch"
+version = "0.1.0"
+description = "GPU-optimized PyTorch refactor of CNN-ALL / adaptive unsharpening for WBC analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+  {name = "Angelo Genovese"},
+  {name = "Mahdi S. Hosseini"},
+  {name = "Vincenzo Piuri"},
+  {name = "Konstantinos N. Plataniotis"},
+  {name = "Fabio Scotti"}
+]
+keywords = ["white blood cells", "acute lymphoblastic leukemia", "PCANet", "PyTorch", "image restoration"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Operating System :: POSIX :: Linux"
+]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pillow>=10.0",
+  "PyYAML>=6.0",
+  "pandas>=2.0",
+  "scikit-learn>=1.4",
+  "scikit-image>=0.22",
+  "matplotlib>=3.8",
+  "tqdm>=4.66",
+  "torch>=2.5",
+  "torchvision>=0.20"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.10"]
+
+[project.scripts]
+cnn-all = "cnn_all.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cnn_all = ["focus/assets/*.npy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]

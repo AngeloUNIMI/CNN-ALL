@@ -1,0 +1,1 @@
+"""Packaged FQPath kernel asset."""
